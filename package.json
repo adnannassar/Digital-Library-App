@@ -1,0 +1,15 @@
+{
+  "name": "dig-library",
+  "version": "1.0.0",
+  "description": "Web app to manage e-books ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Web Group",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "3.1.8",
+    "express": "^4.19.2"
+  }
+}
