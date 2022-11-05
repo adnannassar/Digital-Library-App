@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <div class="container"></div>
+    <form action="login-user" class="box" method="POST">
+        <h1>Login</h1>
+        <input type="text" name="username" class="inputs" placeholder="Benutzername">
+        <input type="password" name="password" class="inputs" placeholder="Passwort">
+        <input type="submit" class="button" value="Einloggin" id="login-button">
+        <div class="register-container">
+            <h2>Haben Sie noch keinen Konto?</h2>
+            <h2><a href="register">&#8680; jetzt Registrieren</a></h2>
+        </div>
+    </form>
+    <%- include("includes/footer") %>
+    <script type="text/javascript" src="js/login.js"></script>
+</body>
+
+</html>

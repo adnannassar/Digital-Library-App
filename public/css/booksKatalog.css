@@ -1,0 +1,104 @@
+body {
+    background-size: cover;
+  }
+  .books-container {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5rem;
+  }
+  
+  
+  .box {
+    flex-basis: 40%;
+    background: #1c1c1ce5;
+    text-align: center;
+    border-radius: 1rem;
+    display: flex;
+    margin: 1rem 5rem 3rem;
+    cursor: pointer;
+  }
+  
+  .box h1 {
+    color: #e9aa65;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-left: 2rem;
+    font-size: 1.2rem;
+  }
+  
+  .box img {
+    border-radius: 1rem 0 0 1rem;
+  }
+  
+  .info-dev {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: start;
+  }
+  
+  
+  .info-dev ul {
+    list-style: none;
+    margin-right: 5rem;
+    margin-top: 0rem;
+  }
+  
+  .info-dev ul li h2 {
+    margin: 0;
+    font-size: 1rem;
+    color: lightseagreen;
+  }
+  
+  .zoom {
+    transition: transform .2s;
+  }
+  
+  .zoom:hover {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  
+  hr {
+    width: 20%;
+    border: 1px solid lightgray;
+  }
+  
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+  
+  .popup p {
+    text-align: center;
+  }
+  
+  .buttons-container .button[value="Abbrechen"] {
+    border: 0.15rem solid lightcoral;
+  }
+  
+  .buttons-container .button[value="Abbrechen"]:hover {
+    background-color: lightcoral;
+  }
+  
+  
+  p {
+    line-height: 1.5rem;
+  }
+  
+  .popup{
+    transition: all 2s ease-in-out;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .box {
+      width: 70%;
+    }
+  
+    .popup {
+      width: 70%;
+    }
+  }

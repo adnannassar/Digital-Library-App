@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width">
+    <title>eBooks Katalog</title>
+    <link rel="stylesheet" type="text/css" href="css/booksKatalog.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+    <main>
+        <%- include("includes/header") %>
+            <div class="books-container">
+                <% booksKatalog.forEach(function (book) { %>
+                    <a href="#<%- book.isbn %>" class="box zoom">
+                        <img alt="Book Picture" src=" <%- book.imgUrl%>" width="200rem" height="auto">
+                        <div class="info-dev">
+
+                            <h1 id="test">
+                                <%- book.title %>
+                            </h1>
+                            <ul>
+                                <li>
+                                    <h2>Beschreibung</h2>
+
+                                    <p>
+                                        <%- book.descreption%>
+                                    </p>
+                                </li>
+                                <li>
+                                    <h2>Karegorie</h2>
+
+                                    <p>
+                                        <%- book.category%>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                    <div id="<%- book.isbn %>" class="overlay">
+                        <form action="book-ausleihen" method="POST">
+                            <div class="popup">
+                                <input type="hidden" name="isbn" value="<%- book.isbn %>" />
+                                <input type="hidden" name="title" value="<%- book.title %>" />
+                                <input type="hidden" name="descreption" value="<%- book.descreption%> " />
+                                <input type="hidden" name="imgUrl" value="<%- book.imgUrl%>" />
+                                <input type="hidden" name="category" value="<%- book.category%> " />
+                                <h2 id="title">
+                                    <%- book.title %>
+                                </h2>
+                                <hr>
+                                <p>Möchten Sie das Buch haben ? </p>
+                                <img src="<%- book.imgUrl%>" width="100rem">
+                                <div class="buttons-container content">
+                                    <a><input type="submit" name="submit" id="ausleihen_button" class="button"
+                                            value="Ausleihen"></a>
+                                    <a href="#" class="close"><input type="button" name="" class="button"
+                                            value="Abbrechen"></a>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <% }); %>
+            </div>
+            <%- include("includes/footer") %>
+    </main>
+
+    <script type="text/javascript" src="js/bookKatalog.js"></script>
+</body>
+
+</html>
