@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width">
+    <title>Meine eBooks</title>
+    <link rel="stylesheet" type="text/css" href="css/myBooks.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <%- include("includes/header") %>
+            <main>
+                <div class="my-books-container">
+                    <% myBooks.forEach(function (book) { %>
+                        <div class=" box">
+                            <a href="ebook-details"> <img src="<%- book.imgUrl %>" width="300rem" height="100%"></a>
+                            <div class="info-dev">
+                                <h1>
+                                    <%- book.title %>
+                                </h1>
+                                <ul>
+                                    <li>
+                                        <h2>Beschreibung</h2>
+                                        <p>
+                                            <%- book.description%>
+                                        </p>
+                                    </li>
+
+                                    <li>
+                                        <h2>Kategorie</h2>
+                                        <p>
+                                            <%- book.category%>
+                                        </p>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <a href="#<%- book.isbn %>">
+                                <input type="submit" id="delete-book-button" value="Entfernen" />
+                            </a>
+
+                            <div id="<%- book.isbn %>" class="overlay">
+                                <form action="delete-book" method="POST">
+                                    <div class="popup">
+                                        <input type="hidden" name="isbn" value="<%- book.isbn %>" />
+                                        <h2>Möchten Sie das Buch aus ihrem List entfernen? </h2>
+                                        <img src="<%- book.imgUrl%>" width="100rem">
+                                        <div class="buttons-container content">
+                                            <a><input type="submit" name="submit" id="ja_button" class="button"
+                                                    value="Ja"></a>
+                                            <a href="#" class="close"><input type="button" name="" class="button"
+                                                    value="Nein"></a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+
+
+
+                        </div>
+                        <% }); %>
+                </div>
+            </main>
+            <%- include("includes/aside") %>
+                <%- include("includes/footer") %>
+
+
+    </div>
+
+</body>
+
+</html>

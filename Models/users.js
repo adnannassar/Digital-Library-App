@@ -6,7 +6,7 @@ class User {
     }
 }
 
-const user1 = new User(1,"Admin", "12345");
+const user1 = new User(1, "Admin", "12345");
 
 const users = [user1];
 

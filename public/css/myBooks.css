@@ -1,0 +1,88 @@
+#delete-book-button {
+    border-radius: 0 1rem 1rem 0;
+    font-size: 1rem;
+    background: none;
+    display: block;
+    height: 100%;
+    text-align: center;
+    border: 0.15rem solid lightcoral;
+    outline: none;
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+    justify-self: flex-end;
+}
+
+#delete-book-button:hover {
+    background-color: rgb(237, 99, 99);
+}
+
+
+
+.my-books-container {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+}
+
+.box {
+    width: 100%;
+    background: #1c1c1ce5;
+    text-align: center;
+    border-radius: 1rem;
+    display: flex;
+    margin-bottom: 10rem;
+    justify-content: space-between;
+}
+
+.box h1 {
+    color: #e9aa65;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 2rem;
+}
+
+.box img {
+    border-radius: 1rem 0 0 1rem;
+}
+
+.info-dev {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: start;
+}
+
+
+.info-dev ul {
+    list-style: none;
+    margin-right: 5rem;
+}
+
+.info-dev ul li h2 {
+    color: lightseagreen;
+}
+
+p {
+    line-height: 2rem;
+}
+
+
+.popup img {
+    border-radius: 0rem;
+}
+
+
+
+.buttons-container .button[value="Nein"] {
+    border: 0.15rem solid lightcoral;
+}
+
+.buttons-container .button[value="Nein"]:hover {
+    background-color: lightcoral;
+}
+
+.popup {
+    transition: all 1s ease-in-out;
+}
